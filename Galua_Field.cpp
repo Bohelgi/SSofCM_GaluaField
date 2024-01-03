@@ -20,23 +20,6 @@ Galua::Galua(std::vector<int> pows) {
     }
 }
 
-std::string Galua::get() {
-    std::string outstr = "";
-    for (int i = vec_x.size() - 1; i >= 0; --i) {
-        if (vec_x[i] == 1) {
-            if (i == 0) {
-                outstr += " + 1";
-            }
-            else {
-                outstr += " + x^" + std::to_string(i);
-            }
-        }
-    }
-    if (outstr == "") {
-        return "0";
-    }
-    return outstr.substr(3);
-}
 
 std::string Galua::toBin() {
     std::string c = "";
